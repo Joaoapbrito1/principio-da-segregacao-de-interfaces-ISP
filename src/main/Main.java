@@ -1,15 +1,21 @@
 package main;
 
-import model.Atendente;
-import model.Programador;
 import service.AtendenteBanco;
 import service.Desenvolvedor;
 
 public class Main {
     public static void main(String[] args) {
-        Programador desenvolvedor = new Desenvolvedor();
+        // Criando um Desenvolvedor
+        Desenvolvedor desenvolvedor = new Desenvolvedor("João ");
+        System.out.println("Funcionário: " + desenvolvedor.getNome());
+        System.out.println("Cargo: " + desenvolvedor.getCargo());
         desenvolvedor.programar();
-        Atendente atendente = new AtendenteBanco();
+        System.out.println();
+
+        // Criando um Atendente
+        AtendenteBanco atendente = new AtendenteBanco("Maria ");
+        System.out.println("Funcionário: " + atendente.getNome());
+        System.out.println("Cargo: " + atendente.getCargo());
         atendente.atenderCliente();
     }
 }
